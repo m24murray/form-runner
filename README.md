@@ -1,27 +1,45 @@
-# MyApp2
+# Form runner
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+This project is a PoC for an example forms runner/viewer application using [Angular](https://angular.io/) 
+and [Form IO](https://github.com/formio/angular).
 
-## Development server
+The application is primarily based-off example project that is created using the [Angular CLI](https://angular.io/cli#basic-workflow).  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In the main `src/app/app.component.html` template, a form is embedded using the Form IO rendering library.
 
-## Code scaffolding
+i.e.
+```html
+<div class="card-container">
+  <div class="card-body">
+    <h5 class="card-title">Result</h5>
+    <div class="bg-light p-3">
+      <formio src='https://examples.form.io/example'></formio>
+    </div>
+  </div>
+</div>
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting started
 
-## Build
+Run `npm install && npm start` to install all dependencies and build the project.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+When the application has compiled and is successfully running, you should see the following line in your build console:
+
+> ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+Navigate to [http://localhost:4200/](http://localhost:4200/) to access the application in your browser.
+
+The build artifacts will be stored in the `dist/` directory.
+
+The application will automatically reload if you change any of the source files.
+
+### Changing the embedded form
+By default, the form viewed with be the example form found at [https://examples.form.io/example](https://examples.form.io/example).
+
+This can be easily changed by modifying the following line in `src/app/app.component.html`:
+
+`<formio src='https://examples.form.io/example'></formio>`
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
